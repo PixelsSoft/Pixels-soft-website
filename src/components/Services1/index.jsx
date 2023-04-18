@@ -39,7 +39,7 @@ const Services1 = () => {
             <span className="icon pe-7s-paint-bucket"></span>
             <h6>Graphic Design ,  Web &amp; <br /> Mobile Design </h6>
             <p>
-              We create a visuals that will help you stand out, grab people's attention, and shine in your own unique way in a market that is already incredibly competitive. A persona that produces outcomes that are exceptional.
+              We create a visuals that will help you stand out, grab people attention, and shine in your own unique way in a market that is already incredibly competitive. A persona that produces outcomes that are exceptional.
             </p>
           </div>
           <div

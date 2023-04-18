@@ -23,10 +23,10 @@ const AboutIntro = () => {
                   We believe that by staying true to our mission, we can help our clients achieve their goals and grow their businesses.
                   <br />
 
-                  At PixelsSoft, we're dedicated to staying at the forefront of technology. We're constantly exploring new ways to use technology to help our clients succeed, and we're committed to ongoing learning and professional development.
+                  At PixelsSoft, we are dedicated to staying at the forefront of technology. We are constantly exploring new ways to use technology to help our clients succeed, and we are committed to ongoing learning and professional development.
                   <br />
 
-                  We're proud of what we've accomplished at PixelsSoft, and we're excited about the future. We look forward to continuing to work with our clients and to helping them achieve their goals."
+                  We sare proud of what we will accomplished at PixelsSoft, and we are excited about the future. We look forward to continuing to work with our clients and to helping them achieve their goals.
                 </p>
               </Split>
             </div>

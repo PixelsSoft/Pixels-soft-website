@@ -127,7 +127,7 @@ const VideoWithTestimonials = () => {
                   </div>
                   <div className="item">
                     <p>
-                      Great work. Very flexible. Open to making adjustments and edits. Very friendly. Fast worker, and attentive to the project. Job well done!"
+                      Great work. Very flexible. Open to making adjustments and edits. Very friendly. Fast worker, and attentive to the project. Job well done!
                     </p>
                     <div className="info">
                       {/* <div className="img">

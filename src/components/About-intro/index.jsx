@@ -14,15 +14,19 @@ const AboutIntro = () => {
           <div className="col-lg-8 offset-lg-1 col-md-8">
             <div className="text">
               <Split>
-                <p className="wow txt words chars splitting" data-splitting>
-                  We develop creative solutions for small and big brands alike,
-                  build authentic product identities and much more.Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit sit non facilisis
-                  vitae eu. Ultrices ut diam morbi risus dui, nec eget at lorem
-                  in id tristique in elementum leo nisi eleifend placerat magna
-                  lacus elementum ornare vehicula odio posuere quisque ultrices
-                  tempus cras id blandit maecenas in ornare quis dolor tempus
-                  risus vitae feugiat fames aliquet sede.
+                <p
+                  className="wow txt words chars splitting"
+                  data-splitting
+                  style={{ textAlign: "center" }}>
+                  PixelsSoft is a dynamic and innovative IT company. Our team is made up of experienced professionals who are passionate about technology and are committed to providing our clients with the best possible solutions.
+                  <br />
+                  We believe that by staying true to our mission, we can help our clients achieve their goals and grow their businesses.
+                  <br />
+
+                  At PixelsSoft, we're dedicated to staying at the forefront of technology. We're constantly exploring new ways to use technology to help our clients succeed, and we're committed to ongoing learning and professional development.
+                  <br />
+
+                  We're proud of what we've accomplished at PixelsSoft, and we're excited about the future. We look forward to continuing to work with our clients and to helping them achieve their goals."
                 </p>
               </Split>
             </div>

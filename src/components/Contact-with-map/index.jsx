@@ -3,18 +3,18 @@ import { Formik, Form, Field } from "formik";
 import axios from 'axios';
 import Split from '../Split';
 
-const ContactWithMap = ({ theme = "dark" }) => {
-  const messageRef = React.useRef(null);
-  function validateEmail(value) {
+const ContactWithMap = ( { theme = "dark" } ) => {
+  const messageRef = React.useRef( null );
+  function validateEmail( value ) {
     let error;
-    if (!value) {
+    if ( !value ) {
       error = "Required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+    } else if ( !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test( value ) ) {
       error = "Invalid email address";
     }
     return error;
   }
-  const sendMessage = (ms) => new Promise((r) => setTimeout(r, ms));
+  const sendMessage = ( ms ) => new Promise( ( r ) => setTimeout( r, ms ) );
   return (
     <>
       <section className="contact section-padding">
@@ -30,19 +30,19 @@ const ContactWithMap = ({ theme = "dark" }) => {
                     email: "",
                     message: "",
                   }}
-                  onSubmit={async (values) => {
-                    await sendMessage(500);
+                  onSubmit={async ( values ) => {
+                    await sendMessage( 500 );
                     // alert(JSON.stringify(values, null, 2));
                     // show message
                     const formData = new FormData();
 
-                    formData.append('name', values.name);
-                    formData.append('email', values.email);
-                    formData.append('message', values.message);
+                    formData.append( 'name', values.name );
+                    formData.append( 'email', values.email );
+                    formData.append( 'message', values.message );
 
-                    const res = await axios.post('/contact.php', formData);
+                    const res = await axios.post( '/contact.php', formData );
 
-                    if (!res) return;
+                    if ( !res ) return;
 
                     messageRef.current.innerText =
                       "Your Message has been successfully sent. I will contact you soon.";
@@ -51,12 +51,12 @@ const ContactWithMap = ({ theme = "dark" }) => {
                     values.email = "";
                     values.message = "";
                     // clear message
-                    setTimeout(() => {
+                    setTimeout( () => {
                       messageRef.current.innerText = "";
-                    }, 2000);
+                    }, 2000 );
                   }}
                 >
-                  {({ errors, touched }) => (
+                  {( { errors, touched } ) => (
                     <Form id="contact-form">
                       <div className="messages" ref={messageRef}></div>
 
@@ -96,7 +96,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
                           />
                         </div>
 
-                        <button type="submit" className={`btn-curve ${theme === 'dark' ? 'btn-lit':'btn-color'} disabled`}>
+                        <button type="submit" className={`btn-curve ${theme === 'dark' ? 'btn-lit' : 'btn-color'} disabled`}>
                           <span>Send Message</span>
                         </button>
                       </div>
@@ -115,9 +115,9 @@ const ContactWithMap = ({ theme = "dark" }) => {
                 </Split>
                 <div className="item mb-40">
                   <h5>
-                    <a href="#0">Email@example.com</a>
+                    <a href="#0">Info@pixelssoft.com</a>
                   </h5>
-                  <h5>+4.930.705.5448</h5>
+                  <h5>(+1) 386 306 6199</h5>
                 </div>
                 <Split>
                   <h3 className="custom-font wow" data-splitting>
@@ -132,18 +132,16 @@ const ContactWithMap = ({ theme = "dark" }) => {
                   </h6>
                 </div>
                 <div className="social mt-50">
-                  <a href="#0" className="icon">
+                  <a href="https://www.facebook.com/profile.php?id=100064333501672" rel="noopener noreferrer" target={"_blank"} className="icon">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-twitter"></i>
+                  <a href="https://www.instagram.com/pixelssoft/" target={"_blank"} rel="noopener noreferrer" className="icon">
+                    <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-pinterest"></i>
+                  <a href="https://www.linkedin.com/company/pixelssoft/" target={"_blank"} rel="noopener noreferrer" className="icon">
+                    <i className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-behance"></i>
-                  </a>
+
                 </div>
               </div>
             </div>
@@ -163,8 +161,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
         <div className="container">
           <div className="copyrights text-center mt-0">
             <p>
-              © 2022, Avo Template. Made with passion by 
-              <a href="#0">ThemesCamp</a>.
+              Copyright © 2022 PixelsSoft. All rights reserved
             </p>
           </div>
         </div>

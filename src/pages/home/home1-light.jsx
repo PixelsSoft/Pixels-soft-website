@@ -15,37 +15,37 @@ import LightTheme from "../../layouts/Light";
 import appData from "../../data/app.json";
 
 const Homepage1 = () => {
-  const fixedSlider = React.useRef(null);
-  const MainContent = React.useRef(null);
-  const navbarRef = React.useRef(null);
-  const logoRef = React.useRef(null);
+  const fixedSlider = React.useRef( null );
+  const MainContent = React.useRef( null );
+  const navbarRef = React.useRef( null );
+  const logoRef = React.useRef( null );
 
-  React.useEffect(() => {
-    setInterval(() => {
-      if (fixedSlider.current) {
+  React.useEffect( () => {
+    setInterval( () => {
+      if ( fixedSlider.current ) {
         var slidHeight = fixedSlider.current.offsetHeight;
       }
-      if (MainContent.current) {
+      if ( MainContent.current ) {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
-    }, 1000);
+    }, 1000 );
     var navbar = navbarRef.current,
       logo = logoRef.current;
-    if (window.pageYOffset > 300) {
-      navbar.classList.add("nav-scroll");
+    if ( window.pageYOffset > 300 ) {
+      navbar.classList.add( "nav-scroll" );
     } else {
-      navbar.classList.remove("nav-scroll");
+      navbar.classList.remove( "nav-scroll" );
     }
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        navbar.classList.add("nav-scroll");
-        logo.setAttribute("src", appData.darkLogo);
+    window.addEventListener( "scroll", () => {
+      if ( window.pageYOffset > 300 ) {
+        navbar.classList.add( "nav-scroll" );
+        logo.setAttribute( "src", appData.darkLogo );
       } else {
-        navbar.classList.remove("nav-scroll");
-        logo.setAttribute("src", appData.lightLogo);
+        navbar.classList.remove( "nav-scroll" );
+        logo.setAttribute( "src", appData.lightLogo );
       }
-    });
-  }, [fixedSlider, MainContent, navbarRef]);
+    } );
+  }, [fixedSlider, MainContent, navbarRef] );
 
   return (
     <LightTheme>
@@ -59,7 +59,7 @@ const Homepage1 = () => {
         <VideoWithTestimonials />
         <SkillsCircle theme="light" subBG />
         <Clients1 theme="light" />
-        <BlogsTwoColumnSlider />
+        {/* <BlogsTwoColumnSlider /> */}
         <CallToAction theme="light" img="/img/pattern-light.png" />
         <Footer />
       </div>

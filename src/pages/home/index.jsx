@@ -14,34 +14,34 @@ import Works1Slider from "../../components/Works1-slider";
 import DarkTheme from "../../layouts/Dark";
 
 const Homepage1 = () => {
-  const fixedSlider = React.useRef(null);
-  const MainContent = React.useRef(null);
-  const navbarRef = React.useRef(null);
-  const logoRef = React.useRef(null);
+  const fixedSlider = React.useRef( null );
+  const MainContent = React.useRef( null );
+  const navbarRef = React.useRef( null );
+  const logoRef = React.useRef( null );
 
-  React.useEffect(() => {
-    setInterval(() => {
-      if (fixedSlider.current) {
+  React.useEffect( () => {
+    setInterval( () => {
+      if ( fixedSlider.current ) {
         var slidHeight = fixedSlider.current.offsetHeight;
       }
-      if (MainContent.current) {
+      if ( MainContent.current ) {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
-    }, 1000);
+    }, 1000 );
     var navbar = navbarRef.current;
-    if (window.pageYOffset > 300) {
-      navbar.classList.add("nav-scroll");
+    if ( window.pageYOffset > 300 ) {
+      navbar.classList.add( "nav-scroll" );
     } else {
-      navbar.classList.remove("nav-scroll");
+      navbar.classList.remove( "nav-scroll" );
     }
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        navbar.classList.add("nav-scroll");
+    window.addEventListener( "scroll", () => {
+      if ( window.pageYOffset > 300 ) {
+        navbar.classList.add( "nav-scroll" );
       } else {
-        navbar.classList.remove("nav-scroll");
+        navbar.classList.remove( "nav-scroll" );
       }
-    });
-  }, [fixedSlider, MainContent, navbarRef]);
+    } );
+  }, [fixedSlider, MainContent, navbarRef] );
 
   return (
     <DarkTheme>
@@ -55,7 +55,7 @@ const Homepage1 = () => {
         <VideoWithTestimonials />
         <SkillsCircle theme="dark" subBG />
         <Clients1 theme="dark" />
-        <BlogsTwoColumnSlider />
+        {/* <BlogsTwoColumnSlider /> */}
         <CallToAction subBG />
         <Footer />
       </div>

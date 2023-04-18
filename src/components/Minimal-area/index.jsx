@@ -5,12 +5,12 @@ import { thumparallaxDown } from "../../common/thumparallax";
 import Split from "../Split";
 
 const MinimalArea = () => {
-  React.useEffect(() => {
+  React.useEffect( () => {
     featuresEffect();
-    setTimeout(() => {
+    setTimeout( () => {
       thumparallaxDown();
-    }, 1000);
-  }, []);
+    }, 1000 );
+  }, [] );
   return (
     <section className="min-area sub-bg">
       <div className="container">
@@ -47,7 +47,7 @@ const MinimalArea = () => {
                     <span>1</span> Our Mission
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                    The goal of PixelsSoft Technologies is to develop the greatest IT systems and solutions for companies of all sizes while fostering a future in which humankind benefits from all technological advancements.
                   </p>
                 </li>
                 <li className="wow fadeInUp" data-wow-delay=".4s">
@@ -55,7 +55,7 @@ const MinimalArea = () => {
                     <span>2</span> Our Goals
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                    a globally interconnected world where nothing is left behind in technology. Pixels Soft provides cutting-edge IT-enabled services to organisations all around the world.
                   </p>
                 </li>
                 <li className="wow fadeInUp" data-wow-delay=".6s">
@@ -63,7 +63,7 @@ const MinimalArea = () => {
                     <span>3</span> Why Us?
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                    We gather requirements to see if it would be feasible and accurate to turn the needs into a potential product.
                   </p>
                 </li>
               </ul>

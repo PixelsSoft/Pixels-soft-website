@@ -8,10 +8,10 @@ import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
 
 const VideoWithTestimonials = () => {
-  const [isOpen, setOpen] = React.useState(false);
-  React.useEffect(() => {
+  const [isOpen, setOpen] = React.useState( false );
+  React.useEffect( () => {
     console.clear();
-  }, []);
+  }, [] );
   const settings = {
     dots: true,
     infinite: true,
@@ -31,21 +31,21 @@ const VideoWithTestimonials = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="vid-area">
-                <div className="vid-icon">
+                {/* <div className="vid-icon">
                   {typeof window !== "undefined" && (
                     <ModalVideo
                       channel="vimeo"
                       autoplay
                       isOpen={isOpen}
                       videoId="127203262"
-                      onClose={() => setOpen(false)}
+                      onClose={() => setOpen( false )}
                     />
                   )}
                   <a
                     className="vid"
-                    onClick={(e) => {
+                    onClick={( e ) => {
                       e.preventDefault();
-                      setOpen(true);
+                      setOpen( true );
                     }}
                     href="https://vimeo.com/127203262"
                   >
@@ -55,7 +55,7 @@ const VideoWithTestimonials = () => {
                       </span>
                     </div>
                   </a>
-                </div>
+                </div> */}
 
                 <div className="cont">
                   <Split>
@@ -83,23 +83,21 @@ const VideoWithTestimonials = () => {
                 >
                   <div className="item">
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Will recommend him to everyone. It Was a great experience working with him.
                     </p>
                     <div className="info">
-                      <div className="img">
+                      {/* <div className="img">
                         <div className="img-box">
                           <img src="/img/clients/1.jpg" alt="" />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                            Nadeem Khan
                           </h6>
                           <span className="author-details">
-                            Co-founder, Colabrio
+                            CEO , Arham Associates
                           </span>
                         </div>
                       </div>
@@ -107,23 +105,21 @@ const VideoWithTestimonials = () => {
                   </div>
                   <div className="item">
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Very easy to work with and wrote beautiful code very quickly. Great communication throughout. I would absolutely work with her again.
                     </p>
                     <div className="info">
-                      <div className="img">
+                      {/* <div className="img">
                         <div className="img-box">
                           <img src="/img/clients/2.jpg" alt="" />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                            Waqas
                           </h6>
                           <span className="author-details">
-                            Co-founder, Colabrio
+                            Director, Jips
                           </span>
                         </div>
                       </div>
@@ -131,23 +127,21 @@ const VideoWithTestimonials = () => {
                   </div>
                   <div className="item">
                     <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                      Great work. Very flexible. Open to making adjustments and edits. Very friendly. Fast worker, and attentive to the project. Job well done!"
                     </p>
                     <div className="info">
-                      <div className="img">
+                      {/* <div className="img">
                         <div className="img-box">
                           <img src="/img/clients/3.jpg" alt="" />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                            Shahid
                           </h6>
                           <span className="author-details">
-                            Co-founder, Colabrio
+                            Co-founder, Construction Company
                           </span>
                         </div>
                       </div>

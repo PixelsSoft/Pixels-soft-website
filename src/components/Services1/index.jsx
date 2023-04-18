@@ -39,8 +39,7 @@ const Services1 = () => {
             <span className="icon pe-7s-paint-bucket"></span>
             <h6>Graphic Design ,  Web &amp; <br /> Mobile Design </h6>
             <p>
-              Tempore corrupti temporibus fuga earum asperiores fugit
-              laudantium.
+              We create a visuals that will help you stand out, grab people's attention, and shine in your own unique way in a market that is already incredibly competitive. A persona that produces outcomes that are exceptional.
             </p>
           </div>
           <div
@@ -51,7 +50,7 @@ const Services1 = () => {
             <h6>
               Web &amp; <br /> Mobile Developmet
             </h6>
-            <p>Tempore corrupti temporibus fuga earum asperiores fugit.</p>
+            <p>We are expert in developing excellent web & mobile app development solutions. Mobile app will greatly impact your digital operations - it will change your entire business.</p>
           </div>
           <div
             className="col-lg-3 col-md-6 item-box wow fadeInLeft"
@@ -61,7 +60,7 @@ const Services1 = () => {
             <h6>
               Social <br /> media Marketing
             </h6>
-            <p>Tempore corrupti temporibus fuga earum asperiores fugit.</p>
+            <p>Our team of SEO professionals are always abreast with the trends and updates being released by search engines. This ensures that your brand ranks within the first page of the search engine faster without any wrong doing to guarantee the success lasts for long</p>
           </div>
         </div>
       </div>

@@ -4,31 +4,26 @@ import Split from "../../Split";
 import Link from "next/link";
 import appData from "../../../data/app.json";
 import handleFullScreenNavbar from "../../../common/handleFullScreenNavbar";
+import Image from "next/image";
 
-const NavbarFullMenu = ( { theme, lr } ) => {
-  React.useEffect( () => {
+const NavbarFullMenu = ({ theme, lr }) => {
+  React.useEffect(() => {
     handleFullScreenNavbar();
-  }, [] );
+  }, []);
   return (
     <>
       <div
         id="navi"
-        className={`topnav ${theme ? ( theme === "light" ? "light" : "" ) : ""}`}
+        className={`topnav ${theme ? (theme === "light" ? "light" : "") : ""}`}
       >
         <div className="container-fluid">
-          <div className="logo">
-            <a href="#0">
-              {theme ? (
-                theme === "light" ? (
-                  <img src={`${appData.darkLogo}`} alt="logo" />
-                ) : (
-                  <img src={`${appData.lightLogo}`} alt="logo" />
-                )
-              ) : (
-                <img src={`${appData.lightLogo}`} alt="logo" />
-              )}
-            </a>
-          </div>
+          {/* <div className="logo"> */}
+          {/* <a href="#0"> */}
+          <Link href='/'>
+            <Image src={`${appData.lightLogo}`} alt="logo" width={150} height={30} />
+          </Link>
+          {/* </a> */}
+          {/* </div> */}
           <div className="menu-icon">
             <span className="icon">
               <i></i>
@@ -262,7 +257,7 @@ const NavbarFullMenu = ( { theme, lr } ) => {
                     </div>
                   </li> */}
                   {/* ================================================blog====== */}
-                  {/* <li>
+                  <li>
                     <div className="o-hidden">
                       <Link href="/blog">
                         <a className="link">
@@ -270,7 +265,7 @@ const NavbarFullMenu = ( { theme, lr } ) => {
                         </a>
                       </Link>
                     </div>
-                  </li> */}
+                  </li>
                   <li>
                     <div className="o-hidden">
                       <Link href="/Contact">

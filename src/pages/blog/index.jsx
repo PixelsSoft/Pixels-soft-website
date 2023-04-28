@@ -3,8 +3,9 @@ import DarkTheme from "../../layouts/Dark";
 import Navbar from "../../components/Navbar";
 import BlogStanderd from "../../components/Blog-standerd";
 import Footer from "../../components/Footer";
+import client from '../../config/sanity.config';
 
-const BlogDark = () => {
+const BlogDark = ({posts = []}) => {
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
   React.useEffect(() => {
@@ -40,10 +41,22 @@ const BlogDark = () => {
           </div>
         </div>
       </section>
-      <BlogStanderd />
+      <BlogStanderd posts={posts} />
       <Footer />
     </DarkTheme>
   );
 };
+
+
+export async function getStaticProps() {
+  let posts = await client.fetch('*[_type == "blog"]{title, excerpt, date, _id, _createdAt, slug, category, image{asset->{path,url}}} | order(_createdAt desc)')
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+
 
 export default BlogDark;

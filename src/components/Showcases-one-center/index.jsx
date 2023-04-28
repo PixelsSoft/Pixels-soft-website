@@ -11,7 +11,7 @@ import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 
 SwiperCore.use([Navigation, Parallax, Mousewheel]);
 
-const ShowcasesOneCenter = () => {
+const ShowcasesOneCenter = ({showcaseItems}) => {
   const [load, setLoad] = React.useState(true);
   React.useEffect(() => {
     setTimeout(() => {
@@ -79,12 +79,12 @@ const ShowcasesOneCenter = () => {
             className="swiper-wrapper"
             slidesPerView={4}
           >
-            {ShowcassesFullScreenData.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper-slide">
+            {showcaseItems.map((slide) => (
+              <SwiperSlide key={slide._id} className="swiper-slide">
                 <div
                   className="bg-img valign"
                   style={{
-                    backgroundImage: `url(${slide.image})`,
+                    backgroundImage: `url(${slide.image.asset.url})`,
                   }}
                   data-overlay-dark="1"
                 >

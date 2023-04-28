@@ -1,5 +1,4 @@
 import DarkTheme from '../layouts/Dark'
-
 import Home1 from "./home"
 
 export default function Home() {

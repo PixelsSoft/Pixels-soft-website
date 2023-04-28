@@ -4,8 +4,10 @@ import addParlx from "../../common/addParlx";
 import Navbar from "../../components/Navbar";
 import CallToAction from "../../components/Call-to-action";
 import PortfolioTwoColumn from "../../components/Portfolio-two-column";
+import client from '../../config/sanity.config'
 
-const Works4Dark = () => {
+const Works4Dark = ({portfolioItems}) => {
+  console.log(portfolioItems)
   const fixedHeader = React.useRef( null );
   const MainContent = React.useRef( null );
   const navbarRef = React.useRef( null );
@@ -71,7 +73,7 @@ const Works4Dark = () => {
         </div>
       </header>
       <div ref={MainContent} className="main-content">
-        <PortfolioTwoColumn />
+        <PortfolioTwoColumn portfolioItems={portfolioItems} />
         <CallToAction />
         <footer className="footer-half sub-bg">
           <div className="container">
@@ -86,5 +88,18 @@ const Works4Dark = () => {
     </DarkTheme>
   );
 };
+
+export async function getStaticProps() {
+  
+  const query = `*[_type == "portfolio"]{_id, name, tags, image{asset->{path,url}}}`
+
+  const portfolioItems = await client.fetch(query)
+  
+  return {
+    props: {
+      portfolioItems
+    }
+  }
+}
 
 export default Works4Dark;

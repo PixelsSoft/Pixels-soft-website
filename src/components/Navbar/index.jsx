@@ -2,6 +2,7 @@
 import React from "react";
 // import { Formik, Form, Field } from "formik";
 import Link from "next/link";
+import Image from "next/image";
 import appData from "../../data/app.json";
 import {
   handleDropdown,
@@ -21,17 +22,11 @@ const Navbar = ( { lr, nr, theme } ) => {
     >
       <div className="container">
         <Link href="/">
-          <a className="logo">
-            {theme ? (
-              theme === "themeL" ? (
-                <img ref={lr} src={`${appData.darkLogo}`} alt="logo" />
-              ) : (
-                <img ref={lr} src={`${appData.lightLogo}`} alt="logo" />
-              )
-            ) : (
-              <img ref={lr} src={`${appData.lightLogo}`} alt="logo" />
-            )}
-          </a>
+          {/* <a className="logo"> */}
+        
+              <Image src={`${appData.lightLogo}`} alt="logo" height={30} width={150}/>
+            
+          {/* </a> */}
         </Link>
 
         <button
@@ -74,11 +69,11 @@ const Navbar = ( { lr, nr, theme } ) => {
               </Link>
             </li>
             {/* ============Blog section here============ */}
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link href="/blog">
                 <a className="nav-link">Blogs</a>
               </Link>
-            </li> */}
+            </li>
 
             <li className="nav-item">
               <Link href="/contact">
